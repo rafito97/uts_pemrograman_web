@@ -4,7 +4,7 @@
 
   $id       = $_POST['id'];
 
-  $query    = "DELETE FROM dosen WHERE ID = $id";
+  $query    = "DELETE FROM matakuliah WHERE ID = $id";
   $result   = mysqli_query($koneksi,$query);
 
   if ($result) {
