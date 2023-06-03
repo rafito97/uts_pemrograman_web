@@ -7,7 +7,7 @@
   $kodematkul             = $_POST['kodematkul'];
   $deskripsi              = $_POST['deskripsi'];
 
-  $query = "UPDATE dosen SET
+  $query = "UPDATE matakuliah SET
               nama               = '$nama',
               kodematkul         = '$kodematkul',
               deskripsi          = '$deskripsi'

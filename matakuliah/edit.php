@@ -12,7 +12,7 @@
     <?php 
       include './config/koneksi.php';
       $id     = $_GET['id'];
-      $query  = "SELECT * FROM dosen WHERE ID = '$id'";
+      $query  = "SELECT * FROM matakuliah WHERE ID = '$id'";
       $result = mysqli_query($koneksi,$query);
       $data   = mysqli_fetch_assoc($result);
     ?>
@@ -28,12 +28,12 @@
 
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Kode Matakuliah</label>
-            <input name="kodematkul" type="text" class="form-control" id="kodematkul" value="<?= $data['kodematkul']?>">
+            <input name="kodematkul" type="text" class="form-control" id="kodematkul" value="<?php  echo isset($data['kodematkul'])? $data['kodematkul'] : (isset($_POST['kodematkul'])?$_POST['kodematkul']: '');?>">
           </div>
 
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Deskripsi</label>
-            <input name="deskripsi" type="text" class="form-control" id="deskripsi" value="<?= $data['deskripsi']?>">
+            <input name="deskripsi" type="text" class="form-control" id="deskripsi" value="<?php  echo isset($data['deskripsi'])? $data['deskripsi'] :'';?>">
           </div>
 
           <div class="col-3 m-auto">
