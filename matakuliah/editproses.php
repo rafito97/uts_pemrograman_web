@@ -1,5 +1,4 @@
 <?php
-
   include './config/koneksi.php';
 
   $id                     = $_POST['id'];
